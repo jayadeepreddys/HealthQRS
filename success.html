@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <title>Bajaj Finserv Health</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+</head>
+
+<body style="font-family: Poppins,sans-serif; background-color: rgb(243, 243, 243);">
+    <div style="width: 100vw;
+    height: 100vh;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-size: 24px;">
+    <div style="color: #1c5c1c;
+    max-width: 573px;
+    width: 100vw;
+    text-align: center;">
+
+        Thank you for the payment.<br />
+        You can now download the Bajaj Finserv Health App to avail loyalty benefits, for booking consultations, lab tests etc.<br />
+        Redirecting in <span id="count">10</span> seconds.
+    </div>
+    <img src="./icons/logo.png" style="display: block;
+    width: 80px;
+    height: 80px;
+    top: 15px;
+    position: relative;">
+    </div>
+
+</body>
+<script>
+    var count = 10;
+    const interval = setInterval(() => { 
+	    document.getElementById('count').innerHTML = count--;
+    }, 1000);
+    setTimeout(() => {
+       window.location.href = 'https://play.google.com/store/apps/details?id=bajajfinserv.in.hrx.app&hl=en_IN&gl=US';
+       clearInterval(interval);
+    }, 11000);
+
+
+</script>
+
+</html>
