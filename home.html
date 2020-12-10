@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <title>Money Games - Play & Win Cash</title>
+    <title>Bajaj Finserv Health</title>
     <link rel="stylesheet" type="text/css" href="./css/style.css">
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <link href='https://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
@@ -36,7 +36,7 @@
     <script src="auth.js"> </script>
 
     <script src="home.js"> </script>
-   
+
 </head>
 
 <body style="padding-top: 11%;font-family: Poppins,sans-serif; background-color: rgb(243, 243, 243);">
@@ -57,9 +57,24 @@
             console.log('service worker is not supported');
         }
     </script>
-    <video id="webcam" autoplay playsinline width="640" height="480"></video>
-    <canvas id="canvas" class="d-none"></canvas>
-    <div class="de0mo"></div>
+    <div style="display: flex; align-items: center; justify-content: center; position: relative;">
+        <video id="webcam" autoplay playsinline width="640" height="480" style="transform: scale(-1, 1); max-width: 600px;"></video>  
+        <audio id="snapSound" src="snap.wav" preload="auto"></audio>      
+        <div id="camera-icons" style="position: absolute; max-width: 600px; height: 80vh; justify-content: center; display: flex; width: 100vw;  max-height: 400px;">
+            <div id="capture-button" style="width: 50px; height: 50px; border-radius: 50%; background: white; position: absolute; bottom: 20px; border: 4px solid rgb(0 0 0 / 10%);"></div>
+            <div id="flip-button" style="width: 50px; height: 50px; border-radius: 50%; position: absolute; bottom: 20px; left: 30px;">
+                <img src="./icons/rotate-camera.svg" />
+            </div>
+
+            <canvas id="canvas" class="d-none" style="max-width: 600px; top: 400px;position: absolute;"></canvas>
+        </div>
+        
+
+    </div>
+
+
+    
+    
     <div id="portalNav" class="fi2jvha">
         <div class="fdacjj2">
             <!-- sidenav -->
@@ -105,7 +120,7 @@
                     <a href="home.html">Home</a>
                     <a href="orderhistory.html">Game History</a>
                     <a href="wallethistory.html">Wallet History</a>
-                     <a onclick="logout()">Logout</a>
+                    <a onclick="logout()">Logout</a>
 
                 </div>
             </div>
@@ -127,13 +142,13 @@
 
         <div class="f306i2h">
 
-        
-    </div>
 
-    <!-- Game card -->
-    <div class="gamesd">
-        
-    </div>
+        </div>
+
+        <!-- Game card -->
+        <div class="gamesd">
+
+        </div>
 </body>
 
 </html>
