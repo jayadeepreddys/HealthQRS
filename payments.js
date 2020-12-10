@@ -48,7 +48,8 @@ function goPay(){
           //  alert(response.razorpay_signature)
         },
         "prefill": {
-            "contact": mobile
+            "contact": mobile,
+            "email": "customer_test@test.com"
             
         },
         "theme": {
@@ -75,7 +76,8 @@ function capturePayment(response){
         paymentId: response.razorpay_payment_id
     })
     .then(function(docRef) {
-        alert("Money Added To Your Wallet");
+        // alert("Money Added To Your Wallet");
+        window.location.href = 'success.html'
     })
     .catch(function(error) {
         console.error("Error adding document: ", error);
@@ -85,5 +87,3 @@ function capturePayment(response){
         alert("Payment Failed.Please Retry");
     }
 }
-
-   
