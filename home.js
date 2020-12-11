@@ -11,24 +11,25 @@ $(document).ready(function () {
   const webcamElement = document.getElementById('webcam');
   const canvasElement = document.getElementById('canvas');
   const snapSoundElement = document.getElementById('snapSound');
-  var webcam = new Webcam(webcamElement, 'user', canvasElement, snapSoundElement);
-  //startcamera();
+  const facingMode = 'environment';
+  var webcam = new Webcam(webcamElement, facingMode, canvasElement, snapSoundElement);
   webcam.start()
-  .then(result =>{
-    console.log("webcam started");
-  })
-  .catch(err => {
-    console.log(err);
-});
-});
-
-   
-
-function startcamera(){
+    .then(result =>{
+      console.log("webcam started");
+    })
+    .catch(err => {
+      console.log(err);
+    });
 
 
+  $('#capture-button').click(function() {
+    webcam.snap();
+    window.location.href="payments.html";
+  });
 
-}
-
-
+  $('#flip-button').click(function() {
+    webcam.flip();
+    webcam.start();  
+  });
+});   
 
